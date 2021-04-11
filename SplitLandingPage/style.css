@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.half-part {
+    position: relative;
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    transition: flex-basis 0.3s ease-in;
+    flex-shrink: 2;
+}
+
+.half-part:hover {
+    flex-basis: 70%;
+    flex-shrink: 1;
+}
+
+.half-part::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.half-part_left {
+    background: url('./images/ps.jpg') no-repeat;
+    background-size: cover;
+}
+
+.half-part_left:before {
+    background-color: rgba(87, 84, 236, 0.7);
+}
+
+.half-part_right {
+    background: url('./images/xbox.jpg') no-repeat;
+    background-size: cover;
+}
+
+.half-part_right:before {
+    background-color: rgba(43, 43, 43, 0.8);
+}
+
+.content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 20%;
+}
+
+.content__title {
+    font-size: 50px;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.content__cta {
+    min-width: 100px;
+    padding: 10px 30px;
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    font-size: 18px;
+}
