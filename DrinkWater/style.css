@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #03a9f4;
+}
+
+.title {
+    margin: 0 0 10px 0;
+    color: #fff;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.subtitle {
+    margin: 0 0 30px 0;
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.main-cup {
+    width: 170px;
+    height: 370px;
+    border: 3px solid #0d47a1;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    overflow: hidden;
+}
+
+.main-cup__top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #fff;
+    transition: 0.3s ease;
+    overflow: hidden;
+}
+
+.main-cup__bottom {
+    height: 0;
+    background-color: #81d4fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+.main-cup__top-rest {
+    font-size: 30px;
+    color: #0d47a1;
+}
+
+.main-cup__bottom-filled {
+    font-size: 30px;
+    color: #0d47a1;
+}
+
+.main-cup__top-label {
+    font-size: 12px;
+    color: #0d47a1;
+    font-weight: 700;
+}
+
+.cups {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cups__title {
+    color: #fff;
+    font-weight: normal;
+}
+
+.cups__list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 270px;
+    margin: 0;
+    padding: 0;
+}
+
+.cup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 100px;
+    border: 3px solid #0d47a1;
+    margin-bottom: 10px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #fff;
+}
+
+.cup:hover {
+    background-color: #81d4fa;
+}
+
+.cup:hover .cup__label {
+    color: #fff;
+}
+
+.cup_active {
+    background-color: #81d4fa;
+}
+
+.cup__label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #0d47a1;
+}
+
+.cup_active .cup__label {
+    color: #fff;
+}
