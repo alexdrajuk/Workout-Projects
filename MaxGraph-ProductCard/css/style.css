@@ -1,0 +1,234 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('../../utils/fonts/NotoSansRegular.woff2') format('woff2');
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('../../utils/fonts/NotoSansSemiBold.woff2') format('woff2');
+    font-display: swap;
+    font-weight: 600;
+    font-style: normal;
+}
+
+:root {
+    --color-dark: #4d4d4d;
+    --color-light: #808080;
+    --color-accent: #5d71dd;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 100px;
+    font-family: 'Noto Sans', serif;
+    font-weight: bold;
+}
+
+
+.product {
+    width: 285px;
+    padding: 9px 20px 20px;
+    border: 1px solid #D9D9D9;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+
+.product__image {
+    position: relative;
+    display: block;
+    height: 162px;
+    overflow: hidden;
+}
+
+.image-switch {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+}
+
+.image-switch__item {
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+.image-switch__img-wrapper {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.image-switch__img {
+    display: block;
+    height: 100%;
+    max-width: 100%;
+}
+
+.image-switch__item_active .image-switch__img-wrapper {
+    opacity: 1;
+    z-index: -1;
+}
+
+.image-switch__item:hover .image-switch__img-wrapper {
+    opacity: 1;
+    z-index: -1;
+}
+
+.image-pagination {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.image-pagination__item {
+    width: 8px;
+    height: 8px;
+    margin: 0 3px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #c4c4c4;
+}
+
+.image-pagination__item_active {
+    background-color: #5D71DD;
+}
+
+
+.product__title {
+    font-family: Noto Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--color-dark);
+    margin-bottom: 10px;
+}
+
+.product__rating-testimonials {
+    margin-bottom: 13px;
+}
+
+.rating-testimonials {
+    display: flex;
+    align-items: center;
+    font: 14px
+}
+
+.rating-testimonials__rating {
+    color: var(--color-accent);
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+.rating-testimonials__rating svg {
+    fill: var(--color-accent);
+}
+
+.rating-testimonials__testimonials {
+    color: var(--color-light);
+    font-weight: 400;
+}
+
+.product__sku {
+    margin-bottom: 4px;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--color-light);
+}
+
+.product__availability {
+    margin-bottom: 14px;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--color-light);
+}
+
+.product-price {
+    display: flex;
+    align-items: center;
+}
+
+.product-price__current {
+    margin-right: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    color: var(--color-dark);
+}
+
+.product-price__old {
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: line-through;
+    line-height: 16px;
+    color: var(--color-light);
+}
+
+.product__cta {
+    display: block;
+    width: 100%;
+    margin-top: 19px;
+    padding: 12px;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    background-color: var(--color-accent);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in;
+}
+
+.product__cta:hover {
+    background-color: #2b45cf;
+}
